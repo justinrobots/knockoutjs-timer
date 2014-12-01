@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="A simple timer built with KnockoutJS">
+	<meta name="author" content="Justin Roberts">
+	<title>KO Timer</title>
+	<link href="css/bootstrap.css" rel="stylesheet">
+	<link href="css/custom.css" rel="stylesheet">
+</head>
+
+<body>
+<!--Knockout Timer-->
+<div id="timer" class="row" name="timer">
+	<h2 class="page-header">KnockoutJS Timer - Justin Roberts</h2>
+	<div class="col col-lg-6 col-lg-offset-3">
+		<div id="time">
+			<span data-bind="text: displaymin"></span><span data-bind="text: displaysec"></span><span data-bind="text: tenths"></span>
+		</div>
+		<div id="buttons">
+			<button id="start" class="btn btn-lg btn-success" data-bind="visible: displayStart, click: start">Start</button>
+			<button id="stop" class="btn btn-lg btn-danger" data-bind="visible: displayStop, click: stop">Stop</button>
+			<div id="reset">
+				<button id= "reset" class="btn btn-lg btn-info" data-bind="visible: displayButton, click: reset">Reset</submit>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Knockout Scripts -->
+<script type='text/javascript' src='js/knockout-2.3.0.js'></script>
+<script type='text/javascript' src='js/ko-timer.js'></script>
+
+
+</body>
+</html>
